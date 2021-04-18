@@ -1,16 +1,15 @@
-package com.bcopstein.ctrlcorredor_v7_CLEAN.adaptadores.repositorios;
+package com.architecture.gambi.controlecorridasclean.adaptadores.repositorios;
 
 import java.util.List;
 
-import com.bcopstein.ctrlcorredor_v7_CLEAN.negocio.entidades.Evento;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.negocio.repositorios.IEventoRepository;
-
+import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
+import com.architecture.gambi.controlecorridasclean.negocio.repositorios.IEventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EventoRepository implements IEventoRepository{
+public class EventoRepository implements IEventoRepository {
     private JdbcTemplate jdbcTemplate;
 
     @Autowired

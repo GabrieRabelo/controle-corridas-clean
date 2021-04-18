@@ -1,6 +1,12 @@
-package com.bcopstein.ctrlcorredor_v7_CLEAN.negocio.entidades;
+package com.architecture.gambi.controlecorridasclean.negocio.entidades;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Evento {
+
+    @Id
     private int id;
     private String nome;
     // Data do evento
@@ -24,6 +30,10 @@ public class Evento {
         this.horas = horas;
         this.minutos = minutos;
         this.segundos = segundos;
+    }
+
+    public Evento() {
+
     }
 
     public int getId() {

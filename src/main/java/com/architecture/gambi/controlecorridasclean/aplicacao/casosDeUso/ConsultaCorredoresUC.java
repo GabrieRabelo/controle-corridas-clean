@@ -1,10 +1,9 @@
-package com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.casosDeUso;
+package com.architecture.gambi.controlecorridasclean.aplicacao.casosDeUso;
 
 import java.util.List;
 
-import com.bcopstein.ctrlcorredor_v7_CLEAN.negocio.entidades.Corredor;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.negocio.servicos.ServicoCorredor;
-
+import com.architecture.gambi.controlecorridasclean.negocio.entidades.Corredor;
+import com.architecture.gambi.controlecorridasclean.negocio.servicos.ServicoCorredor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

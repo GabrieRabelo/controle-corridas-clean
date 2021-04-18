@@ -1,8 +1,7 @@
-package com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.casosDeUso;
+package com.architecture.gambi.controlecorridasclean.aplicacao.casosDeUso;
 
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.dtos.PerformanceDTO;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.servicos.ServicoEstatistica;
-
+import com.architecture.gambi.controlecorridasclean.aplicacao.dtos.PerformanceDTO;
+import com.architecture.gambi.controlecorridasclean.aplicacao.servicos.ServicoEstatistica;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +14,7 @@ public class ConsultaPerformanceUC {
             this.servicoEstatistica = servicoEstatistica;
         }
     
-        public PerformanceDTO run(int distancia,int ano){
+        public PerformanceDTO run(int distancia, int ano){
             return servicoEstatistica.calculaAumentoPerformance(distancia, ano);
         }
     }

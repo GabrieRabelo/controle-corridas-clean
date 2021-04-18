@@ -1,13 +1,13 @@
-package com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.servicos;
+package com.architecture.gambi.controlecorridasclean.aplicacao.servicos;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.dtos.EstatisticasDTO;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.dtos.PerformanceDTO;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.negocio.entidades.Evento;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.negocio.repositorios.IEventoRepository;
 
+import com.architecture.gambi.controlecorridasclean.aplicacao.dtos.EstatisticasDTO;
+import com.architecture.gambi.controlecorridasclean.aplicacao.dtos.PerformanceDTO;
+import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
+import com.architecture.gambi.controlecorridasclean.negocio.repositorios.IEventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,7 +26,7 @@ public class ServicoEstatistica {
         return calculoEstatistica.calculaEstatisticas(distancia);
     }
 
-    public PerformanceDTO calculaAumentoPerformance(int distancia,int ano){
+    public PerformanceDTO calculaAumentoPerformance(int distancia, int ano){
         List<Evento> eventos = eventoRep
                         .todos()
                         .stream()

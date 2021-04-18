@@ -1,10 +1,10 @@
-package com.bcopstein.ctrlcorredor_v7_CLEAN.adaptadores.configuradores;
+package com.architecture.gambi.controlecorridasclean.adaptadores.configuradores;
 
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.servicos.EstatisticaDesconsidera;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.servicos.EstatisticaNormal;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.servicos.ICalculoEstatistica;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.negocio.repositorios.IEventoRepository;
 
+import com.architecture.gambi.controlecorridasclean.aplicacao.servicos.EstatisticaDesconsidera;
+import com.architecture.gambi.controlecorridasclean.aplicacao.servicos.EstatisticaNormal;
+import com.architecture.gambi.controlecorridasclean.aplicacao.servicos.ICalculoEstatistica;
+import com.architecture.gambi.controlecorridasclean.negocio.repositorios.IEventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;

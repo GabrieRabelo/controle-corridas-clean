@@ -1,18 +1,17 @@
-package com.bcopstein.ctrlcorredor_v7_CLEAN.adaptadores.controllers;
+package com.architecture.gambi.controlecorridasclean.adaptadores.controllers;
 
 import java.util.List;
 
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.casosDeUso.CadastraCorredoresUC;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.casosDeUso.CadastraEventoUC;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.casosDeUso.ConsultaCorredoresUC;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.casosDeUso.ConsultaEstatisticasUC;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.casosDeUso.ConsultaEventosUC;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.casosDeUso.ConsultaPerformanceUC;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.dtos.EstatisticasDTO;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.dtos.PerformanceDTO;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.negocio.entidades.Corredor;
-import com.bcopstein.ctrlcorredor_v7_CLEAN.negocio.entidades.Evento;
-
+import com.architecture.gambi.controlecorridasclean.aplicacao.casosDeUso.CadastraCorredoresUC;
+import com.architecture.gambi.controlecorridasclean.aplicacao.casosDeUso.CadastraEventoUC;
+import com.architecture.gambi.controlecorridasclean.aplicacao.casosDeUso.ConsultaCorredoresUC;
+import com.architecture.gambi.controlecorridasclean.aplicacao.casosDeUso.ConsultaEstatisticasUC;
+import com.architecture.gambi.controlecorridasclean.aplicacao.casosDeUso.ConsultaEventosUC;
+import com.architecture.gambi.controlecorridasclean.aplicacao.casosDeUso.ConsultaPerformanceUC;
+import com.architecture.gambi.controlecorridasclean.aplicacao.dtos.EstatisticasDTO;
+import com.architecture.gambi.controlecorridasclean.aplicacao.dtos.PerformanceDTO;
+import com.architecture.gambi.controlecorridasclean.negocio.entidades.Corredor;
+import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.dtos;
+package com.architecture.gambi.controlecorridasclean.aplicacao.dtos;
 
 public class EstatisticasDTO {
     private double media;

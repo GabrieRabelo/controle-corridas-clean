@@ -1,6 +1,7 @@
-package com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.servicos;
+package com.architecture.gambi.controlecorridasclean.aplicacao.servicos;
 
-import com.bcopstein.ctrlcorredor_v7_CLEAN.aplicacao.dtos.EstatisticasDTO;
+
+import com.architecture.gambi.controlecorridasclean.aplicacao.dtos.EstatisticasDTO;
 
 public interface ICalculoEstatistica {
     EstatisticasDTO calculaEstatisticas(int distancia);

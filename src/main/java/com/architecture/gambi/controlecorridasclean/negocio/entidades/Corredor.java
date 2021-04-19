@@ -1,6 +1,7 @@
 package com.architecture.gambi.controlecorridasclean.negocio.entidades;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
@@ -9,7 +10,7 @@ public class Corredor {
     @Id
     private String cpf;
     private String nome;
-    private int diaDn,mesDn,anoDn;
+    private int diaDn, mesDn, anoDn;
     private String genero;
 
     protected Corredor() {
@@ -30,6 +31,7 @@ public class Corredor {
     public int getMesDn() {
         return mesDn;
     }
+
     public int getAnoDn() {
         return anoDn;
     }

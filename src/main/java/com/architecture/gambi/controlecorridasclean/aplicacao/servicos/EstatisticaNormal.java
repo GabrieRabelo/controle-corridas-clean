@@ -1,15 +1,17 @@
 package com.architecture.gambi.controlecorridasclean.aplicacao.servicos;
 
+import com.architecture.gambi.controlecorridasclean.aplicacao.dtos.EstatisticasDTO;
+import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
+import com.architecture.gambi.controlecorridasclean.negocio.repositorios.IEventoRepository;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.architecture.gambi.controlecorridasclean.adaptadores.repositorios.EventoRepository;
-import com.architecture.gambi.controlecorridasclean.aplicacao.dtos.EstatisticasDTO;
-import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
-
 public class EstatisticaNormal implements ICalculoEstatistica {
-    private EventoRepository eventoRep;
-    public EstatisticaNormal(EventoRepository eventoRep){
+
+    private IEventoRepository eventoRep;
+
+    public EstatisticaNormal(IEventoRepository eventoRep){
         this.eventoRep = eventoRep;
     }
 

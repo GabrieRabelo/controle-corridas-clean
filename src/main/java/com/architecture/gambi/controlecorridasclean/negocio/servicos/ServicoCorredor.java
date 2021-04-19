@@ -1,12 +1,11 @@
 package com.architecture.gambi.controlecorridasclean.negocio.servicos;
 
-import java.util.List;
-
-import com.architecture.gambi.controlecorridasclean.adaptadores.repositorios.CorredorRepository;
 import com.architecture.gambi.controlecorridasclean.negocio.entidades.Corredor;
 import com.architecture.gambi.controlecorridasclean.negocio.repositorios.ICorredorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 public class ServicoCorredor {
@@ -18,12 +17,13 @@ public class ServicoCorredor {
     }
 
     public List<Corredor> todos(){
-        return corredorRep.findAll();
+        return corredorRep.todos();
     }
 
     public void cadastraCorredor(Corredor corredor){
-        corredorRep.deleteAll();
-        corredorRep.save(corredor);
+        corredorRep.removeTodos();
+        corredorRep.cadastra(corredor);
+
     }
     
 }

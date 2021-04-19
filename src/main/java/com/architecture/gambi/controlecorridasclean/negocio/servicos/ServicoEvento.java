@@ -1,12 +1,11 @@
 package com.architecture.gambi.controlecorridasclean.negocio.servicos;
 
-import java.util.List;
-
-import com.architecture.gambi.controlecorridasclean.adaptadores.repositorios.EventoRepository;
 import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
 import com.architecture.gambi.controlecorridasclean.negocio.repositorios.IEventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 public class ServicoEvento {
@@ -19,11 +18,11 @@ public class ServicoEvento {
     } 
 
     public List<Evento> todos(){
-        return eventoRep.findAll();
+        return eventoRep.todos();
     }
 
     public void cadastra(Evento evento){
-        eventoRep.save(evento);
+        eventoRep.cadastra(evento);
     }
     
 }

@@ -1,10 +1,10 @@
 package com.architecture.gambi.controlecorridasclean.adaptadores.configuradores;
 
 
-import com.architecture.gambi.controlecorridasclean.adaptadores.repositorios.EventoRepository;
 import com.architecture.gambi.controlecorridasclean.aplicacao.servicos.EstatisticaDesconsidera;
 import com.architecture.gambi.controlecorridasclean.aplicacao.servicos.EstatisticaNormal;
 import com.architecture.gambi.controlecorridasclean.aplicacao.servicos.ICalculoEstatistica;
+import com.architecture.gambi.controlecorridasclean.negocio.repositorios.IEventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
@@ -12,10 +12,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ConfiguradorCalculoEstatistica {
-    private EventoRepository eventoRep;
+    private IEventoRepository eventoRep;
 
     @Autowired
-    public ConfiguradorCalculoEstatistica(EventoRepository eventoRep) {
+    public ConfiguradorCalculoEstatistica(IEventoRepository eventoRep) {
         this.eventoRep = eventoRep;
     }
 

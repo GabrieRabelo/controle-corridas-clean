@@ -3,15 +3,16 @@ package com.architecture.gambi.controlecorridasclean.adaptadores.repositorios;
 import java.util.List;
 
 import com.architecture.gambi.controlecorridasclean.negocio.entidades.Corredor;
+import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
 import com.architecture.gambi.controlecorridasclean.negocio.repositorios.ICorredorRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CorredorRepository {
+public class CorredorRepository implements ICorredorRepository{
 
-    private ICorredorRepository corredorRepository;
+    private JpaCorredorRepository corredorRepository;
 
-    public CorredorRepository(ICorredorRepository corredorRepository) {
+    public CorredorRepository(JpaCorredorRepository corredorRepository) {
         this.corredorRepository = corredorRepository;
     }
 
@@ -26,7 +27,8 @@ public class CorredorRepository {
         corredorRepository.deleteAll();
     }
 
-    public void cadastra(Corredor corredor){
-        corredorRepository.save(corredor);
+    public Corredor cadastra(Corredor corredor){
+        return corredorRepository.save(corredor);
+
     }
 }

@@ -1,19 +1,18 @@
 package com.architecture.gambi.controlecorridasclean.aplicacao.servicos;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import com.architecture.gambi.controlecorridasclean.adaptadores.repositorios.EventoRepository;
 import com.architecture.gambi.controlecorridasclean.aplicacao.dtos.EstatisticasDTO;
 import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
 import com.architecture.gambi.controlecorridasclean.negocio.repositorios.IEventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class EstatisticaDesconsidera implements ICalculoEstatistica {
-    private EventoRepository eventoRep;
+    private IEventoRepository eventoRep;
 
     @Autowired
-    public EstatisticaDesconsidera(EventoRepository eventoRep) {
+    public EstatisticaDesconsidera(IEventoRepository eventoRep) {
         this.eventoRep = eventoRep;
     }
 

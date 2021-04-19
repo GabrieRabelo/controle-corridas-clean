@@ -7,11 +7,11 @@ import com.architecture.gambi.controlecorridasclean.negocio.repositorios.IEvento
 import org.springframework.stereotype.Component;
 
 @Component
-public class EventoRepository {
+public class EventoRepository implements IEventoRepository {
 
-    private IEventoRepository eventoRepository;
+    private JpaEvetosRepository eventoRepository;
 
-    public EventoRepository(IEventoRepository eventoRepository) {
+    public EventoRepository(JpaEvetosRepository eventoRepository) {
         this.eventoRepository = eventoRepository;
     }
 

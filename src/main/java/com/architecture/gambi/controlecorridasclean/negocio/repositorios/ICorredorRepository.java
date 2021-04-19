@@ -1,9 +1,12 @@
 package com.architecture.gambi.controlecorridasclean.negocio.repositorios;
 
 import com.architecture.gambi.controlecorridasclean.negocio.entidades.Corredor;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
+import java.util.List;
 
-@Repository
-public interface ICorredorRepository extends JpaRepository<Corredor, String> {
+
+public interface ICorredorRepository {
+    List<Corredor> todos();
+    void removeTodos();
+    Corredor cadastra(Corredor corredor);
 }

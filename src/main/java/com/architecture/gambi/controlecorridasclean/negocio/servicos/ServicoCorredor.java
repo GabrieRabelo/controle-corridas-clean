@@ -4,25 +4,26 @@ import java.util.List;
 
 import com.architecture.gambi.controlecorridasclean.adaptadores.repositorios.CorredorRepository;
 import com.architecture.gambi.controlecorridasclean.negocio.entidades.Corredor;
+import com.architecture.gambi.controlecorridasclean.negocio.repositorios.ICorredorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ServicoCorredor {
-    public CorredorRepository corredorRep;
+    public ICorredorRepository corredorRep;
 
     @Autowired
-    public ServicoCorredor(CorredorRepository corredorRep){
+    public ServicoCorredor(ICorredorRepository corredorRep){
         this.corredorRep = corredorRep;
     }
 
     public List<Corredor> todos(){
-        return corredorRep.todos();
+        return corredorRep.findAll();
     }
 
     public void cadastraCorredor(Corredor corredor){
-        corredorRep.removeTodos();
-        corredorRep.cadastra(corredor);
+        corredorRep.deleteAll();
+        corredorRep.save(corredor);
     }
     
 }

@@ -4,22 +4,24 @@ import java.util.List;
 
 import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
 import com.architecture.gambi.controlecorridasclean.negocio.repositorios.IEventoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class EventoRepository implements IEventoRepository {
 
-    private JpaEvetosRepository eventoRepository;
+    private JpaEvetosRepository jpaEvetosRepository;
 
-    public EventoRepository(JpaEvetosRepository eventoRepository) {
-        this.eventoRepository = eventoRepository;
+    @Autowired
+    public EventoRepository(JpaEvetosRepository jpaEvetosRepository) {
+        this.jpaEvetosRepository = jpaEvetosRepository;
     }
 
     public List<Evento> todos() {
-        return eventoRepository.findAll();
+        return jpaEvetosRepository.findAll();
     }
 
     public Evento cadastra(Evento evento){
-        return eventoRepository.save(evento);
+        return jpaEvetosRepository.save(evento);
     }
 }

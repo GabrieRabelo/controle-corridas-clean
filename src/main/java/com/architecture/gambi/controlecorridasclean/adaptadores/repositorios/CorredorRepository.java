@@ -1,34 +1,35 @@
 package com.architecture.gambi.controlecorridasclean.adaptadores.repositorios;
 
-import java.util.List;
-
 import com.architecture.gambi.controlecorridasclean.negocio.entidades.Corredor;
-import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
 import com.architecture.gambi.controlecorridasclean.negocio.repositorios.ICorredorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
-public class CorredorRepository implements ICorredorRepository{
+public class CorredorRepository implements ICorredorRepository {
 
-    private JpaCorredorRepository corredorRepository;
+    private JpaCorredorRepository jpaCorredorRepository;
 
-    public CorredorRepository(JpaCorredorRepository corredorRepository) {
-        this.corredorRepository = corredorRepository;
+    @Autowired
+    public CorredorRepository(JpaCorredorRepository jpaCorredorRepository) {
+        this.jpaCorredorRepository = jpaCorredorRepository;
     }
 
     public CorredorRepository() {
     }
     
     public List<Corredor> todos() {
-        return corredorRepository.findAll();
+        return jpaCorredorRepository.findAll();
     }
 
     public void removeTodos(){
-        corredorRepository.deleteAll();
+        jpaCorredorRepository.deleteAll();
     }
 
     public Corredor cadastra(Corredor corredor){
-        return corredorRepository.save(corredor);
+        return jpaCorredorRepository.save(corredor);
 
     }
 }

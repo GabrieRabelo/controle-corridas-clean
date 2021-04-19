@@ -23,7 +23,6 @@ public class ServicoCorredor {
     public void cadastraCorredor(Corredor corredor){
         corredorRep.removeTodos();
         corredorRep.cadastra(corredor);
-
     }
     
 }

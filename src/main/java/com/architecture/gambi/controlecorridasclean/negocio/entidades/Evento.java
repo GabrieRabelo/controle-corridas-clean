@@ -19,20 +19,8 @@ public class Evento {
     private int horas;
     private int minutos;
     private int segundos;
-    
-    public Evento(int id,String nome, int dia, int mes, int ano, int distancia, int horas, int minutos, int segundos) {
-        this.id = id;
-        this.nome = nome;
-        this.dia = dia;
-        this.mes = mes;
-        this.ano = ano;
-        this.distancia = distancia;
-        this.horas = horas;
-        this.minutos = minutos;
-        this.segundos = segundos;
-    }
 
-    public Evento() {
+    protected Evento() {
 
     }
 

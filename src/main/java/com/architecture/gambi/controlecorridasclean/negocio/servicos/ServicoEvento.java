@@ -2,17 +2,18 @@ package com.architecture.gambi.controlecorridasclean.negocio.servicos;
 
 import java.util.List;
 
+import com.architecture.gambi.controlecorridasclean.adaptadores.repositorios.EventoRepository;
 import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
-import com.architecture.gambi.controlecorridasclean.negocio.repositorios.IEventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ServicoEvento {
-    private IEventoRepository eventoRep;
+
+    private EventoRepository eventoRep;
 
     @Autowired
-    public ServicoEvento(IEventoRepository eventoRep){
+    public ServicoEvento(EventoRepository eventoRep){
         this.eventoRep = eventoRep;
     } 
 

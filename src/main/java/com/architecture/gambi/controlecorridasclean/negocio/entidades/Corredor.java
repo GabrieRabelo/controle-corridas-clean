@@ -12,17 +12,7 @@ public class Corredor {
     private int diaDn,mesDn,anoDn;
     private String genero;
 
-    public Corredor(String cpf, String nome, int diaDn, int mesDn, int anoDn, String genero) {
-        this.cpf = cpf;
-        this.nome = nome;
-        this.diaDn = diaDn;
-        this.mesDn = mesDn;
-        this.anoDn = anoDn;
-        this.genero = genero;
-    }
-
-    public Corredor() {
-
+    protected Corredor() {
     }
 
     public String getCpf() {

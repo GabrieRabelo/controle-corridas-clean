@@ -4,20 +4,20 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
+import com.architecture.gambi.controlecorridasclean.adaptadores.repositorios.EventoRepository;
 import com.architecture.gambi.controlecorridasclean.aplicacao.dtos.EstatisticasDTO;
 import com.architecture.gambi.controlecorridasclean.aplicacao.dtos.PerformanceDTO;
 import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
-import com.architecture.gambi.controlecorridasclean.negocio.repositorios.IEventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ServicoEstatistica {
-    private IEventoRepository eventoRep;
+    private EventoRepository eventoRep;
     private ICalculoEstatistica calculoEstatistica;
 
     @Autowired
-    public ServicoEstatistica(IEventoRepository eventoRepository,ICalculoEstatistica calculoEstatistica){
+    public ServicoEstatistica(EventoRepository eventoRepository,ICalculoEstatistica calculoEstatistica){
         this.eventoRep = eventoRepository;
         this.calculoEstatistica = calculoEstatistica;
     }

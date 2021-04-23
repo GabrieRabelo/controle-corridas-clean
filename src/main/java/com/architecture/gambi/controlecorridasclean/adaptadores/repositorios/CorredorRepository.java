@@ -16,9 +16,6 @@ public class CorredorRepository implements ICorredorRepository {
     public CorredorRepository(JpaCorredorRepository jpaCorredorRepository) {
         this.jpaCorredorRepository = jpaCorredorRepository;
     }
-
-    public CorredorRepository() {
-    }
     
     public List<Corredor> todos() {
         return jpaCorredorRepository.findAll();

@@ -1,7 +1,6 @@
 package com.architecture.gambi.controlecorridasclean.negocio.repositorios;
 
 import com.architecture.gambi.controlecorridasclean.negocio.entidades.Corredor;
-import com.architecture.gambi.controlecorridasclean.negocio.entidades.Evento;
 import java.util.List;
 
 

@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class EventoRepository implements IEventoRepository {
 
-    private JpaEvetosRepository jpaEvetosRepository;
+    private JpaEventosRepository jpaEvetosRepository;
 
     @Autowired
-    public EventoRepository(JpaEvetosRepository jpaEvetosRepository) {
+    public EventoRepository(JpaEventosRepository jpaEvetosRepository) {
         this.jpaEvetosRepository = jpaEvetosRepository;
     }
 

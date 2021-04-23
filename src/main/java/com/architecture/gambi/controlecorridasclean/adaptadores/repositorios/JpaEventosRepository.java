@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface JpaEvetosRepository extends JpaRepository<Evento, Integer> {
+public interface JpaEventosRepository extends JpaRepository<Evento, Integer> {
 }
